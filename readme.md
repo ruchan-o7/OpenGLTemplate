@@ -7,8 +7,7 @@ This template aims to bootstrap opengl app with builtin imgui, glm and glfw. Cur
 I'm not expert of cmake as you can guess. Any pr for configuring cmake will appreciate.
 
 # Getting Started
-
-Just run generate-\*.bat file one you want. It will generate build files. Run build.bat for building. Run run.bat.
+Clone this repo recursively (i suggest shallow clone). Change directory to scripts. run generate script, run build script, run app.
 
 ## 3rd parties
 

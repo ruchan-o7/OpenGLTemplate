@@ -1,0 +1,9 @@
+[submodule "glfw"]
+    path = Core/external
+    url = https://github.com/glfw/glfw.git
+[submodule = "glm"]
+    path = Core/external
+    url = https://github.com/g-truc/glm.git
+[submodule = "imgui"]
+    path = Core/external
+    url = https://github.com/ocornut/imgui.git

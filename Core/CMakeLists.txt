@@ -1,5 +1,5 @@
-file(GLOB_RECURSE sources src/*.cpp)
-file(GLOB_RECURSE includes include/**/*.h)
+file(GLOB_RECURSE sources src/*.cpp src/*.c)
+file(GLOB_RECURSE includes include/**/*.h include/Core/EntryPoint.h)
 add_library(Core STATIC ${sources} ${includes})
 set(CMAKE_CXX_STANDARD 20)
 target_include_directories(Core PUBLIC 
@@ -29,7 +29,8 @@ file(GLOB imgui_backend
             ${imgui_dir}/backends/imgui_impl_glfw.cpp
             )
 
-add_library(imgui ${imgui_core} ${imgui_backend})
+add_library(imgui ${imgui_core} ${imgui_backend}
+        include/Core/EntryPoint.h)
 target_include_directories(imgui PUBLIC ${imgui_dir} ${imgui_dir}/backends)
 target_link_libraries(imgui glfw opengl32)
 target_include_directories(Core PUBLIC ${imgui_dir})
